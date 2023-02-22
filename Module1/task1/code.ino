@@ -15,15 +15,16 @@ void setup() {
 void loop() {
   // Read the state of the PIR sensor
   int pirState = digitalRead(pirPin);
-
-  // Print the state of the PIR sensor to the serial monitor
-  Serial.println(pirState);
-
+  
   // If motion is detected, turn on the built-in LED
   if (pirState == HIGH) {
     digitalWrite(LED_BUILTIN, HIGH);
+    // Print the state of the PIR sensor to the serial monitor
+    Serial.println("Motion detected");
   } else {
     // If no motion is detected, turn off the built-in LED
     digitalWrite(LED_BUILTIN, LOW);
+    // Print the state of the PIR sensor to the serial monitor
+    Serial.println("No motion detected!");
   }
 }
