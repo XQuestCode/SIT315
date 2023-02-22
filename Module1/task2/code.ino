@@ -26,11 +26,11 @@ void motionDetected() {
   // If motion is detected, turn on the built-in LED
   if (pirState == HIGH) {
     digitalWrite(LED_BUILTIN, HIGH);
-    Serial.println("Motion detected");
+    Serial.println("Interrupted");
   } else {
     // If no motion is detected, turn off the built-in LED
     digitalWrite(LED_BUILTIN, LOW);
-    Serial.println("No motion detected!");
+    
   }
 }
 
